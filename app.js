@@ -1,20 +1,10 @@
 const nav = document.querySelector('.nav');
+const menuBtn = document.querySelector('.menu-buttons');
 window.addEventListener('scroll', () => {
     nav.classList.toggle('sticky', window.scrollY > 0);
 });
 
-const menu = document.querySelector('.menu');
-let menuOpen = false;
-menu.addEventListener('click', () => {
-    if(!menuOpen) {
-        menu.classList.add('open');
-        menuOpen = true;
-    }
-}); 
-const navLinks = document.querySelector('.nav-links');
 function showNavLinks() {
-    navLinks.classList.toggle('active');
-    menu.classList.toggle('active');
-    menu.classList.remove('open');
-    menuOpen = false;
+    nav.classList.toggle('active');
+    menuBtn.classList.toggle('active');
 }

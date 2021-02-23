@@ -268,44 +268,7 @@ address {
   .nav-links {
     display: none;
   }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    width: 5rem;
-    height: 5rem;
-  }
-  .hamburger {
-    position: absolute;
-    width: 3rem;
-    height: 0.25rem;
-    background: #fff;
-    border-radius: 1rem;
-    transition: all 0.3s ease-out;
-  }
-  .line1 {
-    bottom: 1.5rem;
-  }
-  .line3 {
-    top: 1.5rem;
-  }
-  .menu.open .line2 {
-    display: none;
-  }
-  .menu.open .line1 {
-    bottom: 0;
-    width: 2.6rem;
-    transform: rotateZ(45deg) translate(-1.75rem, -1.75rem);
-  }
-  .menu.open .line3 {
-    top: 0;
-    width: 2.6rem;
-    transform: rotateZ(-45deg) translate(-1.6rem, 1.6rem);
-  }
-  .nav-links.active {
+  .nav.active .nav-links {
     position: fixed;
     top: 0;
     left: 0;
@@ -318,12 +281,44 @@ address {
     justify-content: center;
     flex-direction: column;
   }
-  .nav-links.active li {
+  .nav.active .nav-links li {
     margin: 1rem 0;
   }
-  .nav-links.active a {
+  .nav.active .nav-links a {
     font-size: 1.8rem;
     font-weight: 500;
+  }
+  .menu-buttons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .menu {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    width: 100%;
+    height: 100%;
+  }
+  .menu svg {
+    fill: #fff;
+  }
+  .menu-buttons button:first-child {
+    visibility: hidden;
+  }
+  .menu-buttons.active button:last-child {
+    visibility: hidden;
+  }
+  .menu-buttons.active button:first-child {
+    visibility: visible;
   }
   .services {
     justify-content: center;
