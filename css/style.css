@@ -1,0 +1,360 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  height: 200vh;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background: rgb(0, 142, 190);
+  color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+}
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+body {
+  font-size: 1.6rem;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 10rem;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+.logo {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.1rem;
+}
+.nav-links {
+  display: flex;
+}
+.nav-links li {
+  display: inline-block;
+  margin-left: 4rem;
+}
+.nav-links a {
+  color: #fff;
+}
+.nav.sticky {
+  background: #333;
+  padding: 2.5rem 5rem;
+  box-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.2);
+}
+
+section {
+  padding: 10rem;
+}
+.about {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.intro {
+  max-width: 70rem;
+}
+.intro h2 {
+  padding-bottom: 2rem;
+  font-weight: 500;
+}
+.intro p {
+  line-height: 1.5;
+  color: #333;
+}
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  min-height: 100vh;
+  background: linear-gradient(rgb(40, 44, 52), rgba(0, 0, 0, 0.5));
+}
+.text h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+.text h5 {
+  color: rgb(177, 177, 177);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: cursive;
+  letter-spacing: 0.05rem;
+  text-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+.text a {
+  margin-top: 1.5rem;
+}
+.hero {
+  height: 50vh;
+  flex-basis: 50%;
+}
+.hero svg {
+  height: 100%;
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+.card {
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2),
+    -0.15rem -0.15rem 0.3rem rgba(0, 0, 0, 0.18);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: transform 250ms ease-in-out;
+}
+.card:hover {
+  transform: translateY(-1rem);
+}
+.card p {
+  margin: 0.5rem 0 1rem;
+}
+.faq {
+  background: rgb(40, 44, 52);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+summary {
+  background: rgb(233, 233, 55);
+  padding: 2rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(110, 110, 110, 0.2);
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+details summary::-webkit-details-marker {
+  order: 2;
+}
+summary:hover {
+  background: rgb(255, 255, 54);
+}
+.content {
+  background: #fff;
+  padding: 2rem;
+}
+.content p {
+  color: #333;
+  line-height: 1.5;
+}
+details[open] summary ~ .content {
+  animation: sweep 0.5s ease-in-out;
+}
+@keyframes sweep {
+  from {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(9);
+    opacity: 1;
+  }
+}
+footer {
+  padding: 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+.form {
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2),
+    -0.15rem -0.15rem 0.3rem rgba(110, 110, 110, 0.2);
+  padding: 4em 3em;
+  width: 40rem;
+  max-width: 100%;
+}
+.form h2 {
+  font-weight: 500;
+  color: #333;
+  padding-bottom: 2rem;
+}
+.margin {
+  margin: 1.5rem 0 2rem;
+}
+.form-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form-control input {
+  width: 100%;
+  height: 4.5rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border-radius: 0.3rem;
+  border: 0.1rem solid #333;
+}
+.form-control input:focus {
+  outline-color: dodgerblue;
+}
+.form-control label {
+  position: absolute;
+  pointer-events: none;
+  padding-left: 1.2rem;
+  transition: all 250ms ease-out;
+}
+.form-control input:focus ~ label,
+.form-control input:not(:placeholder-shown) ~ label {
+  transform: translateY(-2.25rem) translateX(1rem);
+  font-size: 1.2rem;
+  background: #fff;
+  padding-left: 0;
+  padding: 0.1rem 0.5rem;
+  font-weight: 600;
+}
+input[type='submit'] {
+  border: none;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: letter-spacing 0.3s ease-out;
+}
+input[type='submit']:hover {
+  letter-spacing: 0.2rem;
+}
+address {
+  font-style: normal;
+  line-height: 1.6;
+  color: #333;
+}
+.menu {
+  display: none;
+}
+@media only screen and (max-width: 48em) {
+  .nav {
+    padding: 2.5rem 5rem;
+  }
+  .nav.sticky {
+    padding: 1.75rem 3rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+  }
+  .hamburger {
+    position: absolute;
+    width: 3rem;
+    height: 0.25rem;
+    background: #fff;
+    border-radius: 1rem;
+    transition: all 0.3s ease-out;
+  }
+  .line1 {
+    bottom: 1.5rem;
+  }
+  .line3 {
+    top: 1.5rem;
+  }
+  .menu.open .line2 {
+    display: none;
+  }
+  .menu.open .line1 {
+    bottom: 0;
+    width: 2.6rem;
+    transform: rotateZ(45deg) translate(-1.75rem, -1.75rem);
+  }
+  .menu.open .line3 {
+    top: 0;
+    width: 2.6rem;
+    transform: rotateZ(-45deg) translate(-1.6rem, 1.6rem);
+  }
+  .nav-links.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(40, 44, 52);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .nav-links.active li {
+    margin: 1rem 0;
+  }
+  .nav-links.active a {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .services {
+    justify-content: center;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .hero {
+    display: none;
+  }
+  .text {
+    text-align: center;
+  }
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .form {
+    order: 2;
+  }
+  section,
+  footer {
+    padding: 5rem;
+  }
+  .form {
+    padding: 2.5em 1.75em;
+  }
+  .form h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
